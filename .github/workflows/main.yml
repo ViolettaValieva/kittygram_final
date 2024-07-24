@@ -26,7 +26,7 @@ jobs:
         python-version: 3.9
 
     - name: Load environment variables
-        run: echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
+      run: echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
 
     - name: Install dependencies
       run: |
