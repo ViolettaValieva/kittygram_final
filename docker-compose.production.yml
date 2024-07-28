@@ -16,17 +16,17 @@ services:
     image: violera/kittygram_backend
     env_file: .env
     volumes:
-      - static:/backend_static
-      - media:/backend_media
+      - static:/static
+      - media:/app/media
     depends_on:
       - db
 
   frontend:
     env_file: .env
     image: violera/kittygram_frontend
-    command: cp -r /app/build/. /frontend_static/
+    command: cp -r /app/build/. /static/
     volumes:
-      - static:/frontend_static
+      - static:/static
 
   gateway:
     image: violera/kittygram_gateway
@@ -35,4 +35,6 @@ services:
       - 9000:80
     volumes:
       - static:/static
-      - media:/media
+      - media:/app/media
+    depends_on:
+      - backend
