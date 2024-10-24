@@ -71,4 +71,4 @@ sudo docker compose -f docker-compose.yml down
 
 ## Автор
 
-Виолетта Валиева https://github.com/ViolettaValieva
+[ViolettaValieva](https://github.com/ViolettaValieva)
